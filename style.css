@@ -36,7 +36,7 @@ body {
 }
 
 .header.scrolled {
-    background: linear-gradient(to right, rgba(214, 196, 124, 0.85), rgba(184, 168, 96, 0.85));
+    background: linear-gradient(to right, rgba(214, 196, 124, 0.9), rgba(184, 168, 96, 0.9));
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     /* border-top: 1px solid #3a3a3c;
     border-bottom: 1px solid #3a3a3c; */
@@ -1183,7 +1183,7 @@ html {
 }
 
 .specialty {
-    background: linear-gradient(135deg, #CBA135, #d6c47c);
+    background: #d6c47c;
     color: #fff;
     padding: 0.15rem 0.5rem;
     /* border-radius: 12px; */
