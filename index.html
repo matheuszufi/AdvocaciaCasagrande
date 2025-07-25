@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advocacia Casagrande - Soluções Jurídicas</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="logo.png" alt="Advocacia Casagrande" class="logo">
+                    <!-- <h2>Emmanuel Casagrande Advocacia</h2> -->
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#home">Início</a></li>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contato</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-layer-1"></div>
+        <div class="hero-layer-2"></div>
+        <div class="container">
+            <div class="hero-content">
+                <h1>Advocacia Artesanal de Excelência</h1>
+                <p><span class="highlight">Tradição</span>, experiência e dedicação em cada caso. Oferecendo soluções jurídicas personalizadas com foco em <span class="highlight">resultados</span> e <span class="highlight">atendimento diferenciado</span>.</p>
+                <div class="hero-buttons">
+                    <button class="btn-primary" onclick="scrollToSection('contact')">Consulta Especializada</button>
+                    <button class="btn-secondary" onclick="scrollToSection('services')">Áreas de Atuação</button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <!-- <img src="emmanuelcasagrande.jpg" alt="Emmanuel Casagrande - Advogado" class="hero-photo"> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services">
+        <div class="container">
+            <h2>Áreas de Atuação</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-balance-scale"></i></div>
+                    <h3>Direito Civil</h3>
+                    <p>Contratos, responsabilidade civil, direitos reais e questões patrimoniais.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-users"></i></div>
+                    <h3>Direito de Família</h3>
+                    <p>Divórcio, guarda, pensão alimentícia e questões matrimoniais.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-building"></i></div>
+                    <h3>Direito Empresarial</h3>
+                    <p>Constituição de empresas, contratos comerciais e consultoria jurídica.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-hard-hat"></i></div>
+                    <h3>Direito Trabalhista</h3>
+                    <p>Ações trabalhistas, rescisões e defesa de direitos do trabalhador.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-home"></i></div>
+                    <h3>Direito Imobiliário</h3>
+                    <p>Compra, venda, locação e regularização de imóveis.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon"><i class="fas fa-gavel"></i></div>
+                    <h3>Direito Penal</h3>
+                    <p>Defesa criminal, recursos e acompanhamento processual.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Tradição em Advocacia</h2>
+                    <p>A Advocacia Casagrande representa uma tradição de excelência no exercício da advocacia, com sólida experiência e reconhecimento no mercado jurídico nacional.</p>
+                    <p>Nossa filosofia baseia-se na advocacia artesanal, onde cada caso recebe atenção personalizada e estratégias específicas, garantindo resultados efetivos e duradouros para nossos clientes.</p>
+                    <div class="stats">
+                        <div class="stat">
+                            <h3>1000+</h3>
+                            <p>Casos de Sucesso</p>
+                        </div>
+                        <div class="stat">
+                            <h3>25+</h3>
+                            <p>Anos de Tradição</p>
+                        </div>
+                        <div class="stat">
+                            <h3>98%</h3>
+                            <p>Satisfação dos Clientes</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="professionals-button-container">
+                        <a href="profissionais.html" class="btn-professionals">
+                            <i class="fas fa-users"></i>
+                            <span>Conheça Nossa Equipe</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2>Entre em Contato</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+                        <div>
+                            <h4>Endereço</h4>
+                            <p>R. Jonatas Serrano, 135<br>Quebec - Londrina, PR</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-phone"></i></div>
+                        <div>
+                            <h4>Telefone</h4>
+                            <p>(43) 4141-3034<br>(43) 99999-9999</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+                        <div>
+                            <h4>E-mail</h4>
+                            <p>contato@advocaciacasagrande.com.br</p>
+                        </div>
+                    </div>
+                </div>
+                <form class="contact-form" id="contactForm">
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" placeholder="Seu nome" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" placeholder="Seu e-mail" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" id="phone" name="phone" placeholder="Seu telefone">
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" placeholder="Sua mensagem" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="btn-primary">Enviar Mensagem</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <img src="logo.png" alt="Advocacia Casagrande" class="logo">
+                        <h3>Advocacia Casagrande</h3>
+                    </div>
+                    <p>Tradição, experiência e excelência em advocacia artesanal. Comprometidos com resultados excepcionais para nossos clientes.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Links Rápidos</h4>
+                    <ul>
+                        <li><a href="#home">Início</a></li>
+                        <li><a href="#services">Serviços</a></li>
+                        <li><a href="#about">Sobre</a></li>
+                        <li><a href="#contact">Contato</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contato</h4>
+                    <p><i class="fas fa-phone"></i> (11) 3456-7890</p>
+                    <p><i class="fas fa-envelope"></i> contato@advocaciacasagrande.com.br</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Advocacia Casagrande. Todos os direitos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- WhatsApp Floating Button -->
+    <div class="whatsapp-float" id="whatsappButton">
+        <div class="whatsapp-icon">
+            <i class="fab fa-whatsapp"></i>
+        </div>
+        <div class="whatsapp-tooltip">
+            Fale conosco no WhatsApp!
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
