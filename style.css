@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Encode+Sans+Condensed:wght@100;200;300;400;500;600;700;800;900&family=League+Script&family=Monsieur+La+Doulaise&display=swap');
 * {
     margin: 0;
@@ -10,8 +11,8 @@
 body {
     /* font-family: 'Inter', sans-serif; */
     line-height: 1.6;
-    color: #3A3A3C;
-    background: #F5F5F5;
+    color: #23272A;
+    background: #F3F4F6;
 }
 
 .container {
@@ -29,14 +30,14 @@ body {
     top: 0;
     margin-top: 24px;
     z-index: 1000;
-    background: linear-gradient(to right, #d6c47c15, #b8a8603c);    
-    border-top: 1px solid #d6c47c;
-    border-bottom: 1px solid #d6c47c;
+    background: linear-gradient(to right, #23272A 80%, #2C3E50 100%);
+    border-top: 1px solid #2C3E50;
+    border-bottom: 1px solid #2C3E50;
     transition: all 0.3s ease;
 }
 
 .header.scrolled {
-    background: linear-gradient(to right, rgba(214, 196, 124, 0.9), rgba(184, 168, 96, 0.9));
+    background: linear-gradient(to right, #23272A 80%, #2C3E50 100%);
     box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     /* border-top: 1px solid #3a3a3c;
     border-bottom: 1px solid #3a3a3c; */
@@ -99,7 +100,7 @@ body {
 
 .nav-menu a {
     text-decoration: none;
-    color: #fff;
+    color: #F3F4F6;
     font-weight: 500;
     transition: color 0.3s ease;
     text-transform: uppercase;
@@ -112,7 +113,7 @@ body {
 }
 
 .nav-menu a:hover {
-    color: #CBA135;
+    color: #A8893C;
 }
 
 .hamburger {
@@ -561,8 +562,8 @@ body {
     width: 100%;
     padding: 1rem;
     border: 1px solid #333;
-    background: #0f0f0f;
-    color: #fff;
+    background: #23272A;
+    color: #F3F4F6;
     font-size: 1rem;
     font-family: 'Barlow', sans-serif;
     transition: border-color 0.3s ease;
@@ -571,8 +572,8 @@ body {
 .form-group input:focus,
 .form-group textarea:focus {
     outline: none;
-    border-color: #CBA135;
-    box-shadow: 0 0 10px rgba(203, 161, 53, 0.3);
+    border-color: #A8893C;
+    box-shadow: 0 0 10px rgba(168, 137, 60, 0.2);
 }
 
 .form-group input::placeholder,
@@ -1104,7 +1105,8 @@ html {
     z-index: 2;
     color: #fff;
     font-size: 2.1rem;
-    font-family: 'Encode Sans Condensed', 'League Script', 'Monsieur La Doulaise', 'Barlow', Arial, sans-serif;
+    font-family: 'Montserrat', 'Encode Sans Condensed', 'League Script', 'Monsieur La Doulaise', 'Barlow', Arial, sans-serif;
+      /* font-family: 'Montserrat', 'Encode Sans Condensed', 'League Script', 'Monsieur La Doulaise', 'Barlow', Arial, sans-serif; */
     font-weight: 700;
     font-style: normal;
     font-weight: 400;
@@ -1183,7 +1185,7 @@ html {
 }
 
 .specialty {
-    background: #d6c47c;
+    background: #23272A ;
     color: #fff;
     padding: 0.15rem 0.5rem;
     /* border-radius: 12px; */
@@ -1191,7 +1193,7 @@ html {
     font-weight: 600;
     text-transform: uppercase;
     letter-spacing: 0.3px;
-    box-shadow: 0 1px 4px rgba(203, 161, 53, 0.3);
+    /* box-shadow: 0 1px 4px #ff0000 100%; */
     transition: all 0.3s ease;
 }
 
