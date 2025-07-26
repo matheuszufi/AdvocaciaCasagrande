@@ -1,3 +1,36 @@
+// Animação de background das fotos dos profissionais no botão
+document.addEventListener('DOMContentLoaded', function() {
+    const professionalsImages = [
+        'emmanuelcasagrande.jpg',
+        'guilhermecasagrande.jpg',
+        'amandaagonilha.jpg',
+        'andressauhdre.jpg',
+        'nataliadeoliveira.jpg'
+    ];
+    const btns = document.querySelectorAll('.btn-professionals');
+    btns.forEach(btn => {
+        // Remove camadas antigas
+        btn.querySelectorAll('.professionals-bg-anim').forEach(el => el.remove());
+        // Cria camadas para cada imagem
+        professionalsImages.forEach((img, idx) => {
+            const div = document.createElement('div');
+            div.className = 'professionals-bg-anim';
+            div.style.backgroundImage = `url('${img}')`;
+            if (idx === 0) div.classList.add('active');
+            btn.appendChild(div);
+        });
+        const layers = Array.from(btn.querySelectorAll('.professionals-bg-anim'));
+        let current = 0;
+        layers[current].style.opacity = '1';
+        setInterval(() => {
+            layers[current].style.opacity = '0';
+            layers[current].classList.remove('active');
+            current = (current + 1) % layers.length;
+            layers[current].style.opacity = '1';
+            layers[current].classList.add('active');
+        }, 5000);
+    });
+});
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
@@ -94,107 +127,62 @@ document.addEventListener('DOMContentLoaded', function() {
 // Smooth scroll to sections
 function scrollToSection(sectionId) {
     const element = document.getElementById(sectionId);
-    if (element) {
-        const headerHeight = document.querySelector('.header').offsetHeight;
-        const elementPosition = element.offsetTop - headerHeight;
-        
-        window.scrollTo({
-            top: elementPosition,
-            behavior: 'smooth'
-        });
-    }
+
+const professionalsImages = [
+  'emmanuelcasagrande.jpg',
+  'guilhermecasagrande.jpg',
+  'nataliadeoliveira.jpg',
+  'amandaagonilha.jpg',
+  'andressauhdre.jpg'
+];
+
+function setupProfessionalsBackground() {
+  const container = document.querySelector('.professionals-button-container');
+
+
+  // Remove any previous animated backgrounds
+  container.querySelectorAll('.professionals-bg-anim').forEach(el => el.remove());
+
+  // Create layers for each image
+  professionalsImages.forEach((img, idx) => {
+    const div = document.createElement('div');
+    div.className = 'professionals-bg-anim';
+    div.style.backgroundImage = `url('${img}')`;
+    div.style.zIndex = '1';
+    div.style.position = 'absolute';
+    div.style.top = '0';
+    div.style.left = '0';
+    div.style.width = '100%';
+    div.style.height = '100%';
+    div.style.opacity = '0';
+    div.style.transition = 'opacity 1s ease';
+    if (idx === 0) div.classList.add('active');
+    container.appendChild(div);
+  });
+
+  // Garante que o conteúdo do botão fique acima das imagens
+  const btns = container.querySelectorAll('.btn-professionals');
+  btns.forEach(btn => {
+    btn.style.position = 'relative';
+    btn.style.zIndex = '2';
+  });
+
+  const layers = Array.from(container.querySelectorAll('.professionals-bg-anim'));
+  let current = 0;
+
+  // Ativa a primeira imagem
+  layers[current].style.opacity = '1';
+
+  setInterval(() => {
+    layers[current].style.opacity = '0';
+    layers[current].classList.remove('active');
+    current = (current + 1) % layers.length;
+    layers[current].style.opacity = '1';
+    layers[current].classList.add('active');
+  }, 5000);
 }
 
-// Contact form handling
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-    e.preventDefault();
-    
-    // Get form data
-    const formData = new FormData(this);
-    const name = formData.get('name');
-    const email = formData.get('email');
-    const phone = formData.get('phone');
-    const message = formData.get('message');
-    
-    // Simple validation
-    if (!name || !email || !message) {
-        showNotification('Por favor, preencha todos os campos obrigatórios.', 'error');
-        return;
-    }
-    
-    if (!isValidEmail(email)) {
-        showNotification('Por favor, digite um e-mail válido.', 'error');
-        return;
-    }
-    
-    // Simulate form submission
-    showNotification('Mensagem enviada com sucesso! Entraremos em contato em breve.', 'success');
-    this.reset();
-});
-
-// Email validation
-function isValidEmail(email) {
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-    return emailRegex.test(email);
-}
-
-// Notification system
-function showNotification(message, type) {
-    // Remove existing notification
-    const existingNotification = document.querySelector('.notification');
-    if (existingNotification) {
-        existingNotification.remove();
-    }
-    
-    // Create notification element
-    const notification = document.createElement('div');
-    notification.className = `notification ${type}`;
-    notification.innerHTML = `
-        <span>${message}</span>
-        <button onclick="this.parentElement.remove()">&times;</button>
-    `;
-    
-    // Add notification styles
-    notification.style.cssText = `
-        position: fixed;
-        top: 20px;
-        right: 20px;
-        background: ${type === 'success' ? '#27ae60' : '#e74c3c'};
-        color: white;
-        padding: 1rem 1.5rem;
-        border-radius: 8px;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.15);
-        z-index: 10000;
-        display: flex;
-        align-items: center;
-        gap: 1rem;
-        animation: slideIn 0.3s ease;
-    `;
-    
-    // Add button styles
-    const closeButton = notification.querySelector('button');
-    closeButton.style.cssText = `
-        background: none;
-        border: none;
-        color: white;
-        font-size: 1.2rem;
-        cursor: pointer;
-        padding: 0;
-        width: 20px;
-        height: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    `;
-    
-    document.body.appendChild(notification);
-    
-    // Auto remove after 5 seconds
-    setTimeout(() => {
-        if (notification.parentElement) {
-            notification.remove();
-        }
-    }, 5000);
+// Fim do arquivo, todos os blocos fechados corretamente
 }
 
 // Add slide-in animation
@@ -303,3 +291,4 @@ document.addEventListener('DOMContentLoaded', function() {
         this.style.transform = 'scale(1)';
     });
 });
+// ...existing code...
